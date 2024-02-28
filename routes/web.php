@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Models\Listing;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,20 +14,17 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+// All Listing
 Route::get('/', function () {
-    return view('listing', [
+    return view('listings', [
         'heading' => "Laravel Listings",
-        'listings' => [
-            [
-                'id' => 1,
-                'title' => 'Post 1',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nihil eaque dicta omnis voluptates aliquid, quo unde vitae molestiae rerum.'
-            ],
-            [
-                'id' => 2,
-                'title' => 'Post 2',
-                'description' => 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ducimus nihil eaque dicta omnis voluptates aliquid, quo unde vitae molestiae rerum.'
-            ]
-        ]
+        'listings' => Listing::all()
     ]);
 });
+
+// Single Listing
+Route::get('/{id}', function () {
+    return view()
+})
+
+
