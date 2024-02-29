@@ -1,8 +1,8 @@
-@if($listings == null)
+@if($listing == null)
     <p>No listing found</p>
+@else
+    <h1>{{$listing['title']}}</h1>
+    <p>{{$listing['description']}}</p>
 @endif    
 
-<h1>{{$listing['title']}}</h1>
 
-
-<p>{{$listing['description']}}</p>

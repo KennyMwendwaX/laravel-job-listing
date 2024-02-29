@@ -5,6 +5,10 @@
 @endif    
 
 @foreach ($listings as $listing)
-    <h3>{{$listing['title']}}</h3>
+    <h3>
+        <a href="/{{$listing['id']}}">
+            {{$listing['title']}}
+        </a>
+    </h3>
     <p>{{$listing['description']}}</p>
 @endforeach     
