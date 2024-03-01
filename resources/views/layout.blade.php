@@ -11,11 +11,11 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         * {
-            font-family: "Poppins", sans-serif;
+            font-family: Roboto, sans-serif;
             font-weight: 400;
             font-style: normal;
         }
@@ -47,7 +47,7 @@
                     <span class="sr-only">Search icon</span>
                 </div>
                 <input type="text" id="search-navbar"
-                    class="block w-full p-2 ps-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:border-2 focus:border-blue-500 outline-none"
+                    class="block w-full py-2 px-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:border-2 focus:border-blue-500 outline-none"
                     placeholder="Search...">
             </div>
 
