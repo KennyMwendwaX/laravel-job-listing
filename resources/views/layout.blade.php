@@ -25,12 +25,12 @@
 </head>
 
 <body>
-    <nav class="bg-white border-b border-gray-300 px-4 py-[5px] fixed left-0 right-0 top-0 z-50">
+    <nav class="bg-white border-b border-gray-300 px-4 py-[3px] fixed left-0 right-0 top-0 z-50">
         <div class="flex flex-wrap items-center justify-between mx-auto py-[6px]">
             <div class="flex items-center space-x-8">
                 <div class="space-x-3 items-center">
                     <a href="/" class="flex items-center gap-2 font-semibold">
-                        <span class="self-center text-2xl font-semibold whitespace-nowrap">
+                        <span class="self-center text-2xl font-semibold whitespace-nowrap text-blue-800">
                             JobHub
                         </span>
                     </a>
@@ -76,7 +76,7 @@
         class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-300 md:translate-x-0"
         aria-label="Sidenav" id="drawer-navigation">
         <div class="overflow-y-auto py-5 px-3 h-full">
-            <div class="text-3xl py-2 border-b border-gray-300">Filters</div>
+            <div class="text-xl py-2 border-b border-gray-300">Filters</div>
             <div class="my-3 border-b border-gray-300">
                 <div class="text-gray-600 mb-4">Schedule</div>
                 <div class="flex items-center mb-4">
