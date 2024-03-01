@@ -9,12 +9,23 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        * {
+            font-family: "Poppins", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+    </style>
+
     <title>JobHub</title>
 </head>
 
 <body>
-    <nav class="bg-white border-b border-gray-200 px-4 py-[6px] fixed left-0 right-0 top-0 z-50">
+    <nav class="bg-white border-b border-gray-300 px-4 py-[5px] fixed left-0 right-0 top-0 z-50">
         <div class="flex flex-wrap items-center justify-between mx-auto py-[6px]">
             <div class="flex items-center space-x-8">
                 <div class="space-x-3 items-center">
@@ -44,7 +55,7 @@
                 {{-- User circle --}}
                 <div>
                     <button
-                        cclass="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5">
+                        class="text-gray-900 bg-white border border-gray-300 focus:outline-none hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 font-medium rounded-full text-sm px-5 py-2.5">
                         <span>Sign in</span>
                     </button>
                 </div>
@@ -62,25 +73,59 @@
     </nav>
 
     <aside
-        class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-200 md:translate-x-0"
+        class="fixed top-0 left-0 z-40 w-64 h-screen pt-14 transition-transform -translate-x-full bg-white border-r border-gray-300 md:translate-x-0"
         aria-label="Sidenav" id="drawer-navigation">
         <div class="overflow-y-auto py-5 px-3 h-full">
-            <ul class="space-y-2">
-                <li>
-                    <a href="/dashboard"
-                        class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-100 group">
-                        <RxDashboard class="w-5 h-5 text-white0 transition duration-75 group-hover:text-gray-900" />
-                        <span class="ml-3">Dashboard</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="/projects"
-                        class="flex items-center p-2 text-base font-medium text-gray-900 rounded-lg hover:bg-gray-100 group">
-                        <LuProjector class="w-5 h-5 text-white0 transition duration-75 group-hover:text-gray-900" />
-                        <span class="ml-3">Projects</span>
-                    </a>
-                </li>
-            </ul>
+            <div class="text-3xl py-2 border-b border-gray-300">Filters</div>
+            <div class="my-3 border-b border-gray-300">
+                <div class="text-gray-600 mb-4">Schedule</div>
+                <div class="flex items-center mb-4">
+                    <input id="full-time" type="checkbox"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
+                    <label for="full-time" class="ms-2 text-sm font-medium text-gray-900">
+                        Full time</label>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input id="part-time" type="checkbox"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
+                    <label for="part-time" class="ms-2 text-sm font-medium text-gray-900">
+                        Part time</label>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input id="contract" type="checkbox"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
+                    <label for="contract" class="ms-2 text-sm font-medium text-gray-900">
+                        Contract</label>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input id="internship" type="checkbox"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
+                    <label for="internship" class="ms-2 text-sm font-medium text-gray-900">
+                        Internship</label>
+                </div>
+            </div>
+
+            <div class="my-3">
+                <div class="text-gray-600 mb-4">Status</div>
+                <div class="flex items-center mb-4">
+                    <input id="on-site" type="checkbox"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
+                    <label for="on-site" class="ms-2 text-sm font-medium text-gray-900">
+                        On Site</label>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input id="remote" type="checkbox"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
+                    <label for="remote" class="ms-2 text-sm font-medium text-gray-900">
+                        Remote</label>
+                </div>
+                <div class="flex items-center mb-4">
+                    <input id="hybrid" type="checkbox"
+                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
+                    <label for="hybrid" class="ms-2 text-sm font-medium text-gray-900">
+                        Hybrid</label>
+                </div>
+            </div>
         </div>
     </aside>
 

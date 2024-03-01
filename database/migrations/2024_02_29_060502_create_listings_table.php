@@ -19,11 +19,11 @@ return new class extends Migration
             $table->string('location');
             $table->string('email');
             $table->string('website');
-            $table->enum('duration', ['Full-time', 'Part-time', 'Internship']);
+            $table->enum('schedule', ['Full-time', 'Part-time', 'Contract', 'Internship']);
             $table->enum('status', ['On-site', 'Remote', 'Hybrid']);
             $table->longText('description');
             $table->timestamps();
-        });        
+        });
     }
 
     /**
