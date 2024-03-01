@@ -19,11 +19,13 @@ class ListingFactory extends Factory
         return [
             'title' => $this->faker->sentence(),
             'tags' => 'laravel, api, backend',
-            'company'=>$this->faker->company(),
-            'email'=>$this->faker->companyEmail(),
-            'website'=> $this->faker->url(),
-            'location'=>$this->faker->city(),
-            'description'=> $this->faker->paragraph(5),
+            'company' => $this->faker->company(),
+            'email' => $this->faker->companyEmail(),
+            'website' => $this->faker->url(),
+            'location' => $this->faker->city(),
+            'duration' => $this->faker->randomElement(['Full-time', 'Part-time', 'Internship']),
+            'status' => $this->faker->randomElement(['On-site', 'Remote', 'Hybrid']),
+            'description' => $this->faker->paragraph(5),
         ];
     }
 }

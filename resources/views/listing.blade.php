@@ -6,7 +6,10 @@
     <p>No listing found</p>
 @else
     <h1>{{$listing['title']}}</h1>
-    <p>{{$listing['description']}}</p>
+    <span>{{$listing['tags']}}</span>
+    <span>{{$listing['duration']}}</span>
+    <span>{{$listing['status']}}</span>
+    <p>{{$listing['description']}}</p>  
 @endif    
 @endsection
 
