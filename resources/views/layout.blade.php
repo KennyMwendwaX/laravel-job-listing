@@ -47,7 +47,7 @@
                     <span class="sr-only">Search icon</span>
                 </div>
                 <input type="text" id="search-navbar"
-                    class="block w-full py-2 px-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:border-2 focus:border-blue-500 outline-none"
+                    class="block w-full py-2 px-12 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:border-2 focus:border-blue-500 outline-none"
                     placeholder="Search...">
             </div>
 
