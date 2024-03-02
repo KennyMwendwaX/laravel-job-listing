@@ -22,7 +22,7 @@ class ListingFactory extends Factory
             'email' => $this->faker->companyEmail(),
             'website' => $this->faker->url(),
             'location' => $this->faker->city(),
-            'schedule' => $this->faker->randomElement(['Full-time', 'Part-time', 'Contract', 'Internship']),
+            'schedule' => $this->faker->randomElement(['Full time', 'Part time', 'Contract', 'Internship']),
             'status' => $this->faker->randomElement(['On-site', 'Remote', 'Hybrid']),
             'description' => $this->faker->paragraph(5),
         ];
