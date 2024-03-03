@@ -26,16 +26,23 @@
                                             : 'bg-yellow-100 text-yellow-800'))) }} text-xs font-medium px-2.5 py-0.5 rounded-full cursor-pointer">
                             {{ $listing->schedule }}</span>
                     </div>
-                    <div class="text-base text-blue-600 mt-1">
-                        {{ $listing->company }}
+                    <div class="flex items-center space-x-2">
+                        <div class="text-base text-blue-600">
+                            {{ $listing->company }}
+                        </div>
+                        <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">
+                            {{ $listing->status }}
+                        </span>
                     </div>
                     <span class="text-gray-400 text-sm mt-1">
                         {{ \Carbon\Carbon::parse($listing->created_at)->format('M d, Y') }}
                     </span>
-                    <div class="flex mt-2 space-x-2">
+                    <div class="flex mt2 space-x-2">
                         <span class="bg-blue-100 text-blue-800 text-xs font-medium px-2 py-1 rounded">
                             {{ $listing->status }}
                         </span>
+                    </div>
+                    <div class="flex mt-2 space-x-2">
                         <span class="inline-block bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs font-medium">
                             Backend</span>
                         <span class="inline-block bg-gray-200 text-gray-600 px-2 py-1 rounded-full text-xs font-medium">
@@ -45,6 +52,10 @@
                             JavaScript
                         </span>
                     </div>
+                    <span class="text-gray-400 text-sm mt-1">
+                        Salary: Ksh 40,000
+                    </span>
+                    <div>{{ $listing->description }}</div>
                 </div>
                 <div class="px-4 py-2 border-t border-gray-200 flex justify-end">
                     <a href="#" class="text-indigo-600 hover:text-indigo-500 text-sm font-medium">
