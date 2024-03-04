@@ -133,28 +133,6 @@
                         Internship</label>
                 </div>
             </div>
-
-            <div class="my-3">
-                <div class="text-gray-600 mb-4">Status</div>
-                <div class="flex items-center mb-3">
-                    <input id="on-site" type="checkbox"
-                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
-                    <label for="on-site" class="ms-2 text-sm font-medium text-gray-900">
-                        On Site</label>
-                </div>
-                <div class="flex items-center mb-3">
-                    <input id="remote" type="checkbox"
-                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
-                    <label for="remote" class="ms-2 text-sm font-medium text-gray-900">
-                        Remote</label>
-                </div>
-                <div class="flex items-center mb-3">
-                    <input id="hybrid" type="checkbox"
-                        class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 cursor-pointer">
-                    <label for="hybrid" class="ms-2 text-sm font-medium text-gray-900">
-                        Hybrid</label>
-                </div>
-            </div>
         </div>
     </aside>
 
