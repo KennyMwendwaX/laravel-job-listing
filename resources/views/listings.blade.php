@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="flex justify-center mt-4">
-                    <a href="#"
+                    <a href="/{{ $listing->id }}"
                         class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-full text-sm font-semibold shadow-sm transition duration-300 ease-in-out">
                         View Job
                     </a>
