@@ -18,8 +18,10 @@ class ListingFactory extends Factory
     {
         return [
             'title' => $this->faker->sentence(3),
+            'salary' => $this->faker->numberBetween(20000, 120000),
             'company' => $this->faker->company(),
             'email' => $this->faker->companyEmail(),
+            'tags' => 'laravel, api, backend',
             'website' => $this->faker->url(),
             'location' => $this->faker->city(),
             'schedule' => $this->faker->randomElement(['Full time', 'Part time', 'Contract', 'Internship']),
