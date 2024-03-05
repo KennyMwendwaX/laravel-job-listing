@@ -11,7 +11,17 @@
             <div class="p-5 bg-white border rounded-lg shadow-sm overflow-hidden">
                 <div class="flex items-center justify-between">
                     <span
-                        class="px-3 py-1 bg-green-500 text-sm font-semibold text-white rounded-full cursor-pointer">{{ $listing->schedule }}</span>
+                        class="{{ $listing->schedule === 'Full time'
+                            ? 'bg-green-500'
+                            : ($listing->schedule === 'Part time'
+                                ? 'bg-blue-500'
+                                : ($listing->schedule === 'Contract'
+                                    ? 'bg-purple-500'
+                                    : ($listing->schedule === 'Internship'
+                                        ? 'bg-amber-500'
+                                        : 'bg-blue-100'))) }} px-3 py-1 text-sm text-white font-semibold rounded-full cursor-pointer">
+                        {{ $listing->schedule }}
+                    </span>
                     <span class="font-medium text-lg text-gray-900">Ksh {{ $listing->salary }}</span>
                 </div>
 
