@@ -10,20 +10,22 @@
         @foreach ($listings as $listing)
             <div class="p-5 bg-white border rounded-lg shadow-sm overflow-hidden">
                 <div class="flex items-center justify-between">
-                    <span class="px-3 py-1 bg-green-500 text-sm font-semibold text-white rounded-full cursor-pointer">Full
-                        time</span>
-                    <span class="font-medium text-lg text-gray-900">Ksh 80,000</span>
+                    <span
+                        class="px-3 py-1 bg-green-500 text-sm font-semibold text-white rounded-full cursor-pointer">{{ $listing->schedule }}</span>
+                    <span class="font-medium text-lg text-gray-900">Ksh {{ $listing->salary }}</span>
                 </div>
 
                 <div class="flex justify-center mt-5 text-xl font-semibold tracking-wide">
-                    Software developer
+                    {{ $listing->title }}
                 </div>
 
                 <div class="flex items-center justify-center space-x-2 text-blue-500 mt-1">
                     <i class="fa-regular fa-building text-3xl"></i>
                     <div class="flex flex-col">
-                        <span class="text-sm">Apple Inc</span>
-                        <span class="text-gray-400 text-xs">Mar 23, 2024</span>
+                        <span class="text-sm">{{ $listing->company }}</span>
+                        <span class="text-gray-400 text-xs">
+                            {{ \Carbon\Carbon::parse($listing->created_at)->format('M d, Y') }}
+                        </span>
                     </div>
                 </div>
 
