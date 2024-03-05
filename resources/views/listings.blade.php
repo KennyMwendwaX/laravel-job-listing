@@ -42,7 +42,7 @@
                 </div>
 
                 <div class="justify-center mt-3">
-                    <p class="line-clamp-3 text-gray-700 text-base">{{ $listing->description }}</p>
+                    <p class="line-clamp-3 text-gray-700 text-sm">{{ $listing->description }}</p>
                 </div>
 
                 <div class="flex justify-center mt-4">

@@ -17,6 +17,7 @@ return new class extends Migration
             $table->string('company');
             $table->string('location');
             $table->string('email');
+            $table->string('tags');
             $table->string('website');
             $table->enum('schedule', ['Full time', 'Part time', 'Contract', 'Internship']);
             $table->enum('status', ['On site', 'Remote', 'Hybrid']);
