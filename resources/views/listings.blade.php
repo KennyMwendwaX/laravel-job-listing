@@ -18,9 +18,13 @@
                 <div class="flex justify-center mt-5 text-xl font-semibold tracking-wide">
                     Software developer
                 </div>
+
                 <div class="flex items-center justify-center space-x-2 text-blue-500 mt-1">
-                    <i class="fa-regular fa-building text-xl"></i>
-                    <span>Apple Inc</span>
+                    <i class="fa-regular fa-building text-3xl"></i>
+                    <div class="flex flex-col">
+                        <span class="text-sm">Apple Inc</span>
+                        <span class="text-gray-400 text-xs">Mar 23, 2024</span>
+                    </div>
                 </div>
 
                 <div class="flex justify-center mt-2 space-x-2">
