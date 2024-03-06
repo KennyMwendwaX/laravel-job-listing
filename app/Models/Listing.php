@@ -11,6 +11,10 @@ class Listing extends Model
 
     public function scopeFilter($query, array $filters)
     {
+        if ($filters['schedule'] ?? false) {
+            $query->where('schedule', 'like', '%' . request('schedule') . '%');
+        }
+
         if ($filters['tag'] ?? false) {
             $query->where('tags', 'like', '%' . request('tag') . '%');
         }
