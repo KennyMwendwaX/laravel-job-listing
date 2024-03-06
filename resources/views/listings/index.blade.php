@@ -1,6 +1,4 @@
-@extends('layout')
-
-@section('content')
+<x-layout>
     @if (count($listings) == 0)
         <p>No listings found</p>
     @endif
@@ -10,4 +8,4 @@
             <x-listing-card :listing="$listing" />
         @endforeach
     </div>
-@endsection
+</x-layout>
