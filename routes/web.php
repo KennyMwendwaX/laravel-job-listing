@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ListingController;
 use Illuminate\Support\Facades\Route;
 use App\Models\Listing;
 
@@ -15,16 +16,7 @@ use App\Models\Listing;
 */
 
 // All Listing
-Route::get('/', function () {
-    return view('listings', [
-        'heading' => "Laravel Listings",
-        'listings' => Listing::all()
-    ]);
-});
+Route::get('/', [ListingController::class, 'index']);
 
 // Single Listing
-Route::get('/{listing}', function (Listing $listing) {
-    return view('listing', [
-        'listing' => $listing,
-    ]);
-});
+Route::get('/{listing}', [ListingController::class, 'show']);

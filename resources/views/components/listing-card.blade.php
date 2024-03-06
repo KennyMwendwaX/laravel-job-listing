@@ -7,7 +7,7 @@
 
 <div class="p-5 bg-white border rounded-lg shadow-sm overflow-hidden">
     <div class="flex items-center justify-between">
-        <span
+        <a href="/?schedule={{ $listing->schedule }}"
             class="{{ $listing->schedule === 'Full time'
                 ? 'bg-green-500'
                 : ($listing->schedule === 'Part time'
@@ -18,7 +18,7 @@
                             ? 'bg-amber-500'
                             : 'bg-blue-100'))) }} px-3 py-1 text-sm text-white font-semibold rounded-full cursor-pointer">
             {{ $listing->schedule }}
-        </span>
+        </a>
         <span class="font-medium text-lg text-gray-900">Ksh {{ $listing->salary }}</span>
     </div>
 
@@ -36,16 +36,14 @@
         </div>
     </div>
 
-    <ul class="flex justify-center mt-2 space-x-2">
+    <div class="flex justify-center mt-3 space-x-2">
         @foreach ($tags as $tag)
-            <li
+            <a href="/?tag={{ $tag }}"
                 class="text-gray-900 bg-white border border-gray-300 px-2 py-1 rounded-full text-xs font-medium cursor-pointer">
-                <a href="/?tag={{ $tag }}">
-                    {{ $tag }}
-                </a>
-            </li>
+                {{ $tag }}
+            </a>
         @endforeach
-    </ul>
+    </div>
 
     <div class="justify-center mt-3">
         <p class="line-clamp-3 text-gray-700 text-sm">{{ $listing->description }}</p>
