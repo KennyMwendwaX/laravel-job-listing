@@ -1,5 +1,10 @@
 @props(['listing'])
 
+@php
+    $created_at = \Carbon\Carbon::parse($listing->created_at)->format('M d, Y');
+    $tags = explode(',', $listing->tags);
+@endphp
+
 <div class="p-5 bg-white border rounded-lg shadow-sm overflow-hidden">
     <div class="flex items-center justify-between">
         <span
@@ -26,24 +31,21 @@
         <div class="flex flex-col">
             <span class="text-sm">{{ $listing->company }}</span>
             <span class="text-gray-400 text-xs">
-                {{ \Carbon\Carbon::parse($listing->created_at)->format('M d, Y') }}
+                {{ $created_at }}
             </span>
         </div>
     </div>
 
-    <div class="flex justify-center mt-2 space-x-2">
-        <span
-            class="text-gray-900 bg-white border border-gray-300 px-2 py-1 rounded-full text-xs font-medium cursor-pointer">
-            Backend</span>
-        <span
-            class="text-gray-900 bg-white border border-gray-300 px-2 py-1 rounded-full text-xs font-medium cursor-pointer">
-            Next.js
-        </span>
-        <span
-            class="text-gray-900 bg-white border border-gray-300 px-2 py-1 rounded-full text-xs font-medium cursor-pointer">
-            JavaScript
-        </span>
-    </div>
+    <ul class="flex justify-center mt-2 space-x-2">
+        @foreach ($tags as $tag)
+            <li
+                class="text-gray-900 bg-white border border-gray-300 px-2 py-1 rounded-full text-xs font-medium cursor-pointer">
+                <a href="/?tag={{ $tag }}">
+                    {{ $tag }}
+                </a>
+            </li>
+        @endforeach
+    </ul>
 
     <div class="justify-center mt-3">
         <p class="line-clamp-3 text-gray-700 text-sm">{{ $listing->description }}</p>
