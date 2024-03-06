@@ -20,3 +20,6 @@ Route::get('/', [ListingController::class, 'index']);
 
 // Single Listing
 Route::get('/{listing}', [ListingController::class, 'show']);
+
+// Show create form
+Route::get('create', [ListingController::class, 'create']);

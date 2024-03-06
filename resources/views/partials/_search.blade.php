@@ -10,6 +10,6 @@
         </div>
         <input type="text" id="search-navbar" name="search"
             class="block w-full py-2 px-12 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:border-2 focus:border-blue-500 outline-none"
-            placeholder="Search...">
+            placeholder="Search jobs...">
     </div>
 </form>
