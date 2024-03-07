@@ -3,6 +3,7 @@
 @php
     $created_at = \Carbon\Carbon::parse($listing->created_at)->format('M d, Y');
     $tags = explode(',', $listing->tags);
+    $remainingTags = count($tags) - 3;
 @endphp
 
 <div class="p-5 bg-white border rounded-lg shadow-sm overflow-hidden">
@@ -37,12 +38,19 @@
     </div>
 
     <div class="flex justify-center mt-3 space-x-2">
-        @foreach ($tags as $tag)
-            <a href="/?tag={{ $tag }}"
-                class="text-gray-900 bg-white border border-gray-300 px-2 py-1 rounded-full text-xs font-medium cursor-pointer">
-                {{ $tag }}
-            </a>
+        @foreach ($tags as $index => $tag)
+            @if ($index < 3)
+                <a href="/?tag={{ $tag }}"
+                    class="text-gray-900 bg-white border border-gray-300 px-2 py-1 rounded-full text-xs font-medium cursor-pointer">
+                    {{ $tag }}
+                </a>
+            @endif
         @endforeach
+        @if ($remainingTags > 0)
+            <span class="text-white bg-purple-500 px-2 py-1 rounded-full text-xs font-medium cursor-pointer">
+                +{{ $remainingTags }}
+            </span>
+        @endif
     </div>
 
     <div class="justify-center mt-3">
