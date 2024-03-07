@@ -32,4 +32,23 @@ class ListingController extends Controller
             'listing' => $listing,
         ]);
     }
+
+    // Store listing data
+    public function store(Request $request)
+    {
+        $formFields = $request->validate(
+            [
+                'title' => 'required',
+                'schedule' => 'required',
+                'status' => 'required',
+                'salary' => 'required',
+                'tags' => 'required',
+                'company' => 'required',
+                'email' => ['email', 'required'],
+                'location' => 'required',
+                'website' => 'required',
+                'description' => 'required',
+            ]
+        );
+    }
 }

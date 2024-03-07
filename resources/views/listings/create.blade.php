@@ -9,6 +9,11 @@
                     <input type="text" name="title" id="title"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-2 focus:border-blue-600 block w-full p-2.5 outline-none"
                         placeholder="Software developer" required>
+                    @error('title')
+                        <span class="text-xs text-red-600">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div>
                     <label for="schedule" class="block mb-2 text-sm font-medium text-gray-900">Job Schedule</label>
@@ -20,6 +25,11 @@
                         <option value="Contract">Contract</option>
                         <option value="Internship">Internship</option>
                     </select>
+                    @error('schedule')
+                        <span class="text-xs text-red-600">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div>
                     <label for="status" class="block mb-2 text-sm font-medium text-gray-900">Job Status</label>
@@ -30,12 +40,22 @@
                         <option value="Remote">Remote</option>
                         <option value="Hybrid">Hybrid</option>
                     </select>
+                    @error('status')
+                        <span class="text-xs text-red-600">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="w-full">
                     <label for="salary" class="block mb-2 text-sm font-medium text-gray-900">Job Salary</label>
                     <input type="text" name="salary" id="salary"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-2 focus:border-blue-600 block w-full p-2.5 outline-none"
                         placeholder="50000" required>
+                    @error('salary')
+                        <span class="text-xs text-red-600">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="w-full">
                     <label for="tags" class="block mb-2 text-sm font-medium text-gray-900">Tags (Comma
@@ -43,6 +63,11 @@
                     <input type="text" name="tags" id="tags"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-2 focus:border-blue-600 block w-full p-2.5 outline-none"
                         placeholder="laravel, api, backend" required>
+                    @error('tags')
+                        <span class="text-xs text-red-600">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="w-full">
                     <label for="company" class="block mb-2 text-sm font-medium text-gray-900">Company Name</label>
@@ -55,24 +80,44 @@
                     <input type="email" name="email" id="email"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-2 focus:border-blue-600 block w-full p-2.5 outline-none"
                         placeholder="acme@gmail.com" required>
+                    @error('company')
+                        <span class="text-xs text-red-600">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="w-full">
                     <label for="location" class="block mb-2 text-sm font-medium text-gray-900">Job Location</label>
                     <input type="text" name="location" id="location"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-2 focus:border-blue-600 block w-full p-2.5 outline-none"
                         placeholder="Nairobi, Kenya" required>
+                    @error('location')
+                        <span class="text-xs text-red-600">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="w-full">
                     <label for="website" class="block mb-2 text-sm font-medium text-gray-900">Company Website</label>
                     <input type="text" name="website" id="website"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-600 focus:border-2 focus:border-blue-600 block w-full p-2.5 outline-none"
                         placeholder="acme.com" required>
+                    @error('website')
+                        <span class="text-xs text-red-600">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
                 <div class="sm:col-span-2">
                     <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Description</label>
                     <textarea id="description" rows="8"
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-2 focus:border-blue-500 outline-none"
                         placeholder="Your job description here"></textarea>
+                    @error('description')
+                        <span class="text-xs text-red-600">
+                            {{ $message }}
+                        </span>
+                    @enderror
                 </div>
             </div>
             <button type="submit"
