@@ -21,5 +21,8 @@ Route::get('/', [ListingController::class, 'index']);
 // Show create form
 Route::get('/create', [ListingController::class, 'create']);
 
+// Store listing data
+Route::post('/', [ListingController::class, 'store']);
+
 // Single Listing
 Route::get('/{listing}', [ListingController::class, 'show']);
