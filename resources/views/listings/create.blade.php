@@ -17,7 +17,7 @@
                 </div>
                 <div>
                     <label for="schedule" class="block mb-2 text-sm font-medium text-gray-900">Job Schedule</label>
-                    <select id="schedule"
+                    <select id="schedule" name="schedule"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-2 focus:border-blue-500 block w-full p-2.5 outline-none">
                         <option selected>Select schedule</option>
                         <option value="Full time">Full time</option>
@@ -33,7 +33,7 @@
                 </div>
                 <div>
                     <label for="status" class="block mb-2 text-sm font-medium text-gray-900">Job Status</label>
-                    <select id="status"
+                    <select id="status" name="status"
                         class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-2 focus:border-blue-500 block w-full p-2.5 outline-none">
                         <option selected>Select status</option>
                         <option value="On site">On site</option>
@@ -110,7 +110,7 @@
                 </div>
                 <div class="sm:col-span-2">
                     <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Description</label>
-                    <textarea id="description" rows="8"
+                    <textarea id="description" rows="8" name="description"
                         class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-2 focus:border-blue-500 outline-none"
                         placeholder="Your job description here"></textarea>
                     @error('description')
@@ -122,7 +122,7 @@
             </div>
             <button type="submit"
                 class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800">
-                Add product
+                Create Job
             </button>
         </form>
     </div>

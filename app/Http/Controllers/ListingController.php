@@ -41,7 +41,7 @@ class ListingController extends Controller
                 'title' => 'required',
                 'schedule' => 'required',
                 'status' => 'required',
-                'salary' => 'required',
+                'salary' => ['numeric', 'required'],
                 'tags' => 'required',
                 'company' => 'required',
                 'email' => ['email', 'required'],
@@ -50,5 +50,9 @@ class ListingController extends Controller
                 'description' => 'required',
             ]
         );
+
+        Listing::create($formFields);
+
+        return redirect('/');
     }
 }
