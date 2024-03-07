@@ -13,6 +13,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
     <script src="https://cdn.tailwindcss.com"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.x.x/dist/cdn.min.js"></script>
     <style>
         * {
             font-family: "Poppins", sans-serif;
@@ -32,6 +33,8 @@
     <main class="p-4 md:ml-64 h-auto pt-20">
         {{ $slot }}
     </main>
+
+    <x-flash-message />
 </body>
 
 </html>
