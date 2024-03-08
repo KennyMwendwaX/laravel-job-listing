@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Listing;
+use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Http\Request;
 
 class ListingController extends Controller
@@ -36,21 +37,20 @@ class ListingController extends Controller
     // Store listing data
     public function store(Request $request)
     {
-        $formFields = $request->validate(
-            [
-                'title' => 'required',
-                'schedule' => 'required',
-                'status' => 'required',
-                'salary' => ['numeric', 'required'],
-                'tags' => 'required',
-                'company' => 'required',
-                'email' => ['email', 'required'],
-                'location' => 'required',
-                'website' => 'required',
-                'description' => 'required',
-            ]
-        );
+        $formFields = $request->validate([
+            'title' => 'required',
+            'schedule' => 'required',
+            'status' => 'required',
+            'salary' => ['numeric', 'required'],
+            'tags' => 'required',
+            'company' => 'required',
+            'email' => ['email', 'required'],
+            'location' => 'required',
+            'website' => 'required',
+            'description' => 'required',
+        ]);
 
+        // Store description as Markdown
         Listing::create($formFields);
 
         return redirect('/')->with('success', 'Listing created successfully!');

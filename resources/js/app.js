@@ -1,1 +1,5 @@
-import './bootstrap';
+tailwind.config = {
+    corePlugins: {
+        preflight: false,
+    },
+};

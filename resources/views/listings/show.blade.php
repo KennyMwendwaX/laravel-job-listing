@@ -6,6 +6,6 @@
         <span>{{ $listing['tags'] }}</span>
         <span>{{ $listing['duration'] }}</span>
         <span>{{ $listing['status'] }}</span>
-        <p>{{ $listing['description'] }}</p>
+        <p>{!! Illuminate\Support\Str::markdown($listing->description) !!}</p>
     @endif
 </x-layout>
