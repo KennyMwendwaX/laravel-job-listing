@@ -135,8 +135,8 @@
         <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
         <script>
             const easyMDE = new EasyMDE({
-                showIcons: ['strikethrough', 'code', 'table', 'redo', 'heading', 'undo', 'heading-bigger',
-                    'heading-smaller', 'heading-1', 'heading-2', 'heading-3', 'clean-block', 'horizontal-rule'
+                toolbar: ["bold", "italic", "heading", "|", "quote", "unordered-list", "ordered-list", "|", "link",
+                    "table", "clean-block", "horizontal-rule", "|", "preview", "guide", "undo", "redo",
                 ],
                 element: document.getElementById('description')
             });
