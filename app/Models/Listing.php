@@ -25,7 +25,11 @@ class Listing extends Model
     public function scopeFilter($query, array $filters)
     {
         if ($filters['search'] ?? false) {
-            $query->where('title', 'like', '%' . request('search') . '%')->orWhere('tags', 'like', '%' . request('search') . '%');
+            $searchTerm = '%' . strtolower(request('search')) . '%';
+            $query->where(function ($query) use ($searchTerm) {
+                $query->whereRaw('LOWER(title) LIKE ?', [$searchTerm])
+                    ->orWhereRaw('LOWER(tags) LIKE ?', [$searchTerm]);
+            });
         }
 
         if ($filters['schedule'] ?? false) {

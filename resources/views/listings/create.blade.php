@@ -1,7 +1,7 @@
 <x-layout>
-    @push('styles')
+    {{-- @push('styles')
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
-    @endpush
+    @endpush --}}
 
     <div class="px-4 mx-auto max-w-screen-md">
         <h2 class="mb-4 text-xl font-bold text-gray-900 flex justify-center">Add a new job listing</h2>
@@ -125,13 +125,13 @@
                 </div>
             </div>
             <button type="submit"
-                class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800">
+                class="inline-flex items-center px-5 py-2.5 mt-4 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800">
                 Create Job
             </button>
         </form>
     </div>
 
-    @push('scripts')
+    {{-- @push('scripts')
         <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
         <script>
             const easyMDE = new EasyMDE({
@@ -141,5 +141,5 @@
                 element: document.getElementById('description')
             });
         </script>
-    @endpush
+    @endpush --}}
 </x-layout>
