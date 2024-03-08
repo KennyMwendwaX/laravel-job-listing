@@ -21,6 +21,8 @@
             font-style: normal;
         }
     </style>
+    @stack('styles')
+
 
     <title>JobHub</title>
 </head>
@@ -35,6 +37,9 @@
     </main>
 
     <x-flash-message />
+
+    @stack('scripts')
+
 </body>
 
 </html>

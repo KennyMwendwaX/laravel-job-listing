@@ -1,4 +1,8 @@
 <x-layout>
+    @push('styles')
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.css">
+    @endpush
+
     <div class="px-4 mx-auto max-w-screen-md">
         <h2 class="mb-4 text-xl font-bold text-gray-900 flex justify-center">Add a new job listing</h2>
         <form method="POST" action="/">
@@ -110,8 +114,8 @@
                 </div>
                 <div class="sm:col-span-2">
                     <label for="description" class="block mb-2 text-sm font-medium text-gray-900">Description</label>
-                    <textarea id="description" rows="8" name="description"
-                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-2 focus:border-blue-500 outline-none"
+                    <textarea id="description" rows="3" name="description"
+                        class="block p-2.5 w-full text-sm text-gray-900 bg-gray-50 rounded-lg border border-gray-300 focus:ring-blue-500 focus:border-2 focus:border-blue-500 outline-none z-50"
                         placeholder="Your job description here"></textarea>
                     @error('description')
                         <span class="text-xs text-red-600">
@@ -121,9 +125,21 @@
                 </div>
             </div>
             <button type="submit"
-                class="inline-flex items-center px-5 py-2.5 mt-4 sm:mt-6 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800">
+                class="inline-flex items-center px-5 py-2.5 text-sm font-medium text-center text-white bg-blue-700 rounded-lg focus:ring-4 focus:ring-blue-200 hover:bg-blue-800">
                 Create Job
             </button>
         </form>
     </div>
+
+    @push('scripts')
+        <script src="https://cdn.jsdelivr.net/npm/easymde/dist/easymde.min.js"></script>
+        <script>
+            const easyMDE = new EasyMDE({
+                showIcons: ['strikethrough', 'code', 'table', 'redo', 'heading', 'undo', 'heading-bigger',
+                    'heading-smaller', 'heading-1', 'heading-2', 'heading-3', 'clean-block', 'horizontal-rule'
+                ],
+                element: document.getElementById('description')
+            });
+        </script>
+    @endpush
 </x-layout>
