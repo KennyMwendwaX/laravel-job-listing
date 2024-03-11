@@ -21,42 +21,24 @@
                 <p class="mt-8 text-gray-800">{{ $listing->description }}</p>
             </div>
             <div class="w-full md:w-1/3 mt-6 md:mt-0">
-                <div class="rounded-lg border bg-card text-card-foreground shadow-sm">
-                    <div class="flex flex-col space-y-1.5 p-6 pb-0">
-                        <h3 class="font-semibold whitespace-nowrap tracking-tight text-2xl">Details</h3>
-                    </div>
-                    <div class="p-6 grid gap-2">
+                <div class="p-4 rounded-lg border text-card-foreground shadow-sm">
+                    <h3 class="font-semibold whitespace-nowrap tracking-tight text-xl">Details</h3>
+                    <div class="grid gap-2 mt-4">
                         <div class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="w-4 h-4">
-                                <rect width="18" height="18" x="3" y="4" rx="2" ry="2"></rect>
-                                <line x1="16" x2="16" y1="2" y2="6"></line>
-                                <line x1="8" x2="8" y1="2" y2="6"></line>
-                                <line x1="3" x2="21" y1="10" y2="10"></line>
-                            </svg>
+                            <i class="fa-regular fa-calendar"></i>
                             <div class="text-sm">Posted: 2 days ago</div>
                         </div>
                         <div class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="w-4 h-4">
-                                <line x1="2" x2="5" y1="12" y2="12"></line>
-                                <line x1="19" x2="22" y1="12" y2="12"></line>
-                                <line x1="12" x2="12" y1="2" y2="5"></line>
-                                <line x1="12" x2="12" y1="19" y2="22"></line>
-                                <circle cx="12" cy="12" r="7"></circle>
-                            </svg>
+                            <i class="fa-solid fa-location-dot"></i>
                             <div class="text-sm">Location: Remote</div>
                         </div>
                         <div class="flex items-center gap-2">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
-                                stroke-linejoin="round" class="w-4 h-4">
-                                <circle cx="12" cy="12" r="10"></circle>
-                                <polyline points="12 6 12 12 16 14"></polyline>
-                            </svg>
-                            <div class="text-sm">Employment Type: Full-time</div>
+                            <i class="fa-regular fa-clock"></i>
+                            <div class="text-sm">Schedule: Full-time</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-link"></i>
+                            <div class="text-sm">Website: apple.com</div>
                         </div>
                     </div>
                 </div>
