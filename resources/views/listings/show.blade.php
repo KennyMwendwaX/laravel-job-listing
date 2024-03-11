@@ -1,10 +1,22 @@
+@php
+    $created_at = \Carbon\Carbon::parse($listing->created_at)->format('M d, Y');
+@endphp
+
 <x-layout>
     @if ($listing == null)
         <p>No listing found</p>
     @else
         <div class="px-4 mx-auto max-w-screen-md">
             <h1 class="text-3xl font-bold text-gray-800">{{ $listing->title }}</h1>
-
+            <div class="flex items-center space-x-2 text-blue-500 mt-1">
+                <i class="fa-regular fa-building text-4xl"></i>
+                <div class="flex flex-col">
+                    <span class="text-base">{{ $listing->company }}</span>
+                    <span class="text-gray-400 text-sm">
+                        {{ $created_at }}
+                    </span>
+                </div>
+            </div>
             <div class="flex items-center mt-2">
                 <div class="flex items-center mr-4 space-x-2">
                     <svg class="w-5 h-5 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24"
