@@ -23,32 +23,32 @@
             <div class="w-full md:w-1/3 mt-6 md:mt-0">
                 <div class="p-4 rounded-lg border text-card-foreground shadow-sm">
                     <h3 class="font-semibold whitespace-nowrap tracking-tight text-xl">Details</h3>
-                    <div class="grid gap-2 mt-4">
+                    <div class="grid gap-2 mt-3">
                         <div class="flex items-center gap-2">
                             <i class="fa-regular fa-calendar"></i>
                             <div class="text-sm">Posted: 2 days ago</div>
-                        </div>
-                        <div class="flex items-center gap-2">
-                            <i class="fa-solid fa-location-dot"></i>
-                            <div class="text-sm">Location: Remote</div>
                         </div>
                         <div class="flex items-center gap-2">
                             <i class="fa-regular fa-clock"></i>
                             <div class="text-sm">Schedule: Full-time</div>
                         </div>
                         <div class="flex items-center gap-2">
+                            <i class="fa-solid fa-location-dot"></i>
+                            <div class="text-sm">Location: Nairobi, Kenya</div>
+                        </div>
+                        <div class="flex items-center gap-2">
+                            <i class="fa-regular fa-envelope"></i>
+                            <div class="text-sm">Email: info.acme@gmail.com</div>
+                        </div>
+                        <div class="flex items-center gap-2">
                             <i class="fa-solid fa-link"></i>
-                            <div class="text-sm">Website: apple.com</div>
+                            <div class="text-sm">Website: acme.com</div>
                         </div>
                     </div>
                 </div>
-                <div class="rounded-lg border bg-card text-card-foreground shadow-sm mt-6">
-                    <div class="flex flex-col space-y-1.5 p-6 pb-0">
-                        <h3 class="font-semibold whitespace-nowrap tracking-tight text-2xl">Salary</h3>
-                    </div>
-                    <div class="p-6">
-                        <p class="text-3xl font-bold">$120,000 - $150,000</p>
-                    </div>
+                <div class="p-4 rounded-lg border bg-card text-card-foreground shadow-sm mt-6">
+                    <h3 class="font-semibold whitespace-nowrap tracking-tight text-xl">Salary</h3>
+                    <p class="text-xl font-bold mt-3">Ksh 120,000</p>
                 </div>
                 <div class="rounded-lg border bg-card text-card-foreground shadow-sm mt-6">
                     <div class="flex flex-col space-y-1.5 p-6 pb-0">
