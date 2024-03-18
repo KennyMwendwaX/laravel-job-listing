@@ -56,5 +56,8 @@ class ListingController extends Controller
     }
 
     // Show listing application form
-
+    public function showApplicationForm()
+    {
+        return view('listings.apply');
+    }
 }
