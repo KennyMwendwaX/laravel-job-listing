@@ -26,3 +26,6 @@ Route::post('/', [ListingController::class, 'storeListing']);
 
 // Single Listing
 Route::get('/{listing}', [ListingController::class, 'showListing']);
+
+// Show application form
+Route::get('/{listing}/apply', [ListingController::class, 'showApplicationForm']);
