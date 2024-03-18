@@ -3,13 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\Listing;
-use GrahamCampbell\Markdown\Facades\Markdown;
 use Illuminate\Http\Request;
 
 class ListingController extends Controller
 {
     // Show all listings
-    public function index()
+    public function showListings()
     {
         return view('listings.index', [
             'listings' => Listing::latest()->filter([
@@ -21,13 +20,13 @@ class ListingController extends Controller
     }
 
     // Show create form
-    public function create()
+    public function createListing()
     {
         return view('listings.create');
     }
 
     // Show single listing
-    public function show(Listing $listing)
+    public function showListing(Listing $listing)
     {
         return view('listings.show', [
             'listing' => $listing,
@@ -35,7 +34,7 @@ class ListingController extends Controller
     }
 
     // Store listing data
-    public function store(Request $request)
+    public function storeListing(Request $request)
     {
         $formFields = $request->validate([
             'title' => 'required',
@@ -55,4 +54,7 @@ class ListingController extends Controller
 
         return redirect('/')->with('success', 'Listing created successfully!');
     }
+
+    // Show listing application form
+
 }
